@@ -403,6 +403,13 @@ LINUXINCLUDE    := \
 		-I$(srctree)/arch/$(hdr-arch)/include \
 		-I$(objtree)/arch/$(hdr-arch)/include/generated/uapi \
 		-I$(objtree)/arch/$(hdr-arch)/include/generated \
+		-I$(objtree)/drivers/battery_v2/include \
+		-I$(objtree)/drivers/battery_v2 \
+		-I$(objtree)/drivers/gpu/msm \
+		-I$(objtree)/drivers/media/platform/msm/camera_v2-legacy/isp \
+		-I$(objtree)/drivers/platform/msm/ipa/ipa_clients \
+		-I$(objtree)/drivers/platform/msm/ipa/ipa_v2 \
+		-I$(objtree)/drivers/media/platform/msm/camera_v2-legacy/sensor/io \
 		$(if $(KBUILD_SRC), -I$(srctree)/include) \
 		-I$(objtree)/include
 

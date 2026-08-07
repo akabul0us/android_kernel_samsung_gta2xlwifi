@@ -187,4 +187,3 @@ obj-$(CONFIG_USE_MUIC)		+= muic/
 obj-$(CONFIG_BATTERY_SAMSUNG)	+= battery_v2/
 obj-$(CONFIG_DRV_SAMSUNG)	+= samsung/
 
-obj-$(CONFIG_KSU) += kernelsu/
