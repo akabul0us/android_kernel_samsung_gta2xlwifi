@@ -1,0 +1,9 @@
+[submodule "kali-nethunter-kernel-builder"]
+	path = kali-nethunter-kernel-builder
+	url = https://gitlab.com/kalilinux/nethunter/build-scripts/kali-nethunter-kernel-builder
+[submodule "drivers/net/wireless/mediatek/mt76"]
+	path = drivers/net/wireless/mediatek/mt76
+	url = https://github.com/akabul0us/mt76
+[submodule "nethunter"]
+	path = nethunter
+	url = https://github.com/cyberknight777/android_kernel_nethunter

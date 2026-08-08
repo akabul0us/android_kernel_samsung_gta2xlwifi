@@ -11,7 +11,7 @@ do.systemless=1
 do.cleanup=1
 do.cleanuponabort=1
 device.name1=gta2xlwifi
-device.name2=SM-T590
+device.name2=gta2xlwifixx
 '; } # end properties
 
 ### AnyKernel install

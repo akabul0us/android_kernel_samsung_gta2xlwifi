@@ -1117,7 +1117,22 @@ enum mac80211_rx_flags {
 	RX_FLAG_ALLOW_SAME_PN		= BIT_ULL(33),
 	RX_FLAG_ICV_STRIPPED		= BIT_ULL(34),
 };
+enum mac80211_rx_encoding_flags {
+	RX_ENC_FLAG_SHORTPRE		= BIT(0),
+	RX_ENC_FLAG_SHORT_GI		= BIT(2),
+	RX_ENC_FLAG_HT_GF		= BIT(3),
+	RX_ENC_FLAG_STBC_MASK		= BIT(4) | BIT(5),
+	RX_ENC_FLAG_LDPC		= BIT(6),
+	RX_ENC_FLAG_BF			= BIT(7),
+};
 
+
+enum mac80211_rx_encoding {
+	RX_ENC_LEGACY = 0,
+	RX_ENC_HT,
+	RX_ENC_VHT,
+	RX_ENC_HE,
+};
 #define RX_FLAG_STBC_SHIFT		26
 
 /**
@@ -1178,9 +1193,12 @@ struct ieee80211_rx_status {
 	u32 ampdu_reference;
 	u64 flag;
 	u16 freq;
+	u8 enc_flags;
+	u8 encoding:2, bw:3, he_ru:3;
 	u8 vht_flag;
 	u8 rate_idx;
 	u8 vht_nss;
+	u8 nss;
 	u8 rx_flags;
 	u8 band;
 	u8 antenna;
